@@ -18,7 +18,7 @@ if (process.env.NODE_ENV !== "production") {
 app.use(express.static(staticPath, { maxAge: 86400000 }));
 
 app.get('/', function(req, res) {
-  res.sendfile(path.join(staticPath, 'index.html'));
+  res.sendFile(path.join(staticPath, 'index.html'));
 });
 
 require('./routes/io.js')(app, io);
